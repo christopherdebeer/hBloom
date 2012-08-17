@@ -4,7 +4,7 @@ Hierarchical bloom classifier for tagging text with a structured word list.
 
 
 
-This has prpbably been solved before by smater people than myself.
+This has prpbably been solved before by smater people than myself. Given a structured tree of categories and corresponding words/strings, **hBloom** will create a bloom filter for each level of depth in the data, which returns true/false for all sub categories, in the case of 'true' it will return the matching categories.
 
 
 ##Install
@@ -22,8 +22,15 @@ This has prpbably been solved before by smater people than myself.
 		console.log(result);
 	});
 
+##Methods
 
-#License
+	**classifyText( text, callback )**
+
+	**classify( word )**
+
+
+
+##License
 
 Not sure yet, busy deciding, most likely MIT.
 	
