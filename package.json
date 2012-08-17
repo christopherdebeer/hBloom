@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "underscore": "~1.3.3",
-    "bloomfilter": "0.0.10",
-    "async": "~0.1.22"
+    "bloomfilter": "0.0.10"
   },
   "devDependencies": {},
   "description": "hirachical bloom classifier",
