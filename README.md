@@ -33,7 +33,7 @@ An example is available at `example/index.js`. The example tests 5000 tweets aga
 
 ##Structured Data?
 
-The data passed to `hBloom({DATA})` should follow the example below:
+The data passed to `hBloom({DATA})` should follow the example below. Where keys are tags/categories and strings in arrays or matching words.
 
 	{
 		"racing": {
