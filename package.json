@@ -1,7 +1,7 @@
 {
   "author": "Christopher de Beer <christopherdebeer@gmail.com> (http://empirecollective.co.uk)",
   "name": "hbloom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/christopherdebeer/hBloom.git"
