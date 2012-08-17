@@ -2,8 +2,7 @@
 
 var hBloom = require('../hBloom');
 
-
-var DATA = {
+var Data = {
 	"racing": {
 		"asscot": ["asscot", "ass", "the big race"]
 	},
@@ -20,13 +19,11 @@ var DATA = {
 };
 
 
-var sportBloom = hBloom(DATA);
-// var result = test.classify("dundee");
+var sportBloom = hBloom(Data);
 
 
 var txt = "This post is about celtic and rangers, but mentions villa.";
 
 sportBloom.classifyText(txt, function(result){
 	console.log(result);
-
 });
