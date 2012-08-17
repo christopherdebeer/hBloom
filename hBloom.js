@@ -4,8 +4,6 @@ var BloomFilter = require('bloomfilter').BloomFilter,
 	_			= require('underscore');
 
 
-	//  node ./node_modules/node-inspector/bin/inspector.js --start-brk=bloom.js  --forward-io --profile --web-port=9000
-
 function hBloom(obj, internal) {
 
 	function flattenObj (obj) {
