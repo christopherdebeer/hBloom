@@ -24,11 +24,30 @@ This has prpbably been solved before by smater people than myself. Given a struc
 
 ##Methods
 
-	**classifyText( text, callback )**
+**classifyText( text, callback )**
 
-	**classify( word )**
+**classify( word )**
 
 
+##Structured Data?
+
+The data passed to `hBloom({DATA})` should follow the example below:
+
+	{
+		"racing": {
+			"asscot": ["asscot", "ass", "the big race"]
+		},
+		"football": {
+			"manchester united": ["manu", "man united", "mufc", "manchester united", "manufc"],
+			"aston villa": ["aston villa", "villa" , "villafc"],
+			"manchester city": ["mancity", "manchester city", "cityfc", "man city", "mancityfc"],
+			"scottish league": {
+				"dundee united": ["dundee", "dundee united", "dundeefc"],
+				"rangers": ["rangers","rangersfc"],
+				"celtic": ["celtic", "celticfc"]
+			}
+		}
+	}
 
 ##License
 
