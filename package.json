@@ -1,12 +1,12 @@
 {
   "author": "Christopher de Beer <christopherdebeer@gmail.com> (http://empirecollective.co.uk)",
-  "name": "hBloom",
+  "name": "hbloom",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/christopherdebeer/hBloom.git"
   },
-  "main": "bloom.js",
+  "main": "hBloom.js",
   "engines": {
     "node": "~0.6.2"
   },

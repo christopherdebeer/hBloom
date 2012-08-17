@@ -1,6 +1,5 @@
 
 var BloomFilter = require('bloomfilter').BloomFilter,
-	async		= require('async'),
 	_			= require('underscore');
 
 
@@ -52,18 +51,20 @@ function hBloom(obj, internal) {
 			classifyText: function (text, cb){
 				
 				var that = this;
-				var words = text.toLowerCase()
-					.replace(/[^\w|\d|\-|_|\s]+/gi, " ")
-					.replace(/\s+/g, " ")
+				var words = text
+					// .toLowerCase()
+					// .replace(/[^\w|\d|\-|_|\s]+/gi, " ")
+					// .replace(/\s+/g, " ")
 					.split(' ');
 					
-				async.map(words, function(w, callback){
-					callback(null, that.classify(w));
-				}, function(err, result){
-					async.filter(result, function(x, callback){
-						callback(x ? x : false);
-					}, cb);
+				var results = _.map(words, function(w){
+					return that.classify(w);
 				});
+
+				cb(_.filter(results, function(x){
+					return x ? x : false;
+				}));
+				
 
 			},
 			self: bloom2,
@@ -77,7 +78,7 @@ function hBloom(obj, internal) {
 			for (var x in hBloom[2]) {
 				var result = recursiveBloomTest(word, hBloom[2][x]);
 				if (result && typeof result === 'boolean') return x;
-				else if (result) return  _.flatten([x, result]); // Optionally remove flatten for optimisation
+				else if (result) return [x, result]; // _.flatten(); // Optionally remove flatten for optimisation
 			}
 			return true;
 		} else return false;
