@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/christopherdebeer/hBloom.png)](http://travis-ci.org/christopherdebeer/hBloom)
 hBloom
 =========
 Hierarchical bloom classifier for tagging text with a structured word list.
