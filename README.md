@@ -2,6 +2,7 @@ hBloom
 =========
 Hierarchical bloom classifier for tagging text with a structured word list.
 
+[![Build Status](https://secure.travis-ci.org/christopherdebeer/hBloom.png?branch=master)](http://travis-ci.org/christopherdebeer/hBloom)
 
 
 This has prpbably been solved before by smater people than myself. Given a structured tree of categories and corresponding words/strings, **hBloom** will create a bloom filter for each level of depth in the data, which returns true/false for all sub categories, in the case of 'true' it will return the matching categories.
@@ -24,11 +25,13 @@ An example is available at `example/index.js`. The example tests 5000 tweets aga
 		console.log(result);
 	});
 
+	// logs: ['football', 'celtic', 'rangers', 'aston villa']
+
 ##Methods
 
-**classifyText( text, callback )**
+    hBloom.classifyText( text, callback )
 
-**classify( word )**
+    hBloom.classify( word );
 
 
 ##Structured Data?
@@ -53,6 +56,9 @@ The data passed to `hBloom({DATA})` should follow the example below. Where keys 
 
 ##License
 
-Not sure yet, busy deciding, most likely MIT.
-	
+MIT
+
+
+
+
 Copyright 2012 Christopher de beer
